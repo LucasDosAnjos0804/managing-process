@@ -6,7 +6,7 @@
 
 
 
-#define ENABLE_LOGS 0
+#define ENABLE_LOGS 1
 
 void
 logs(char c[])
@@ -14,7 +14,6 @@ logs(char c[])
     if (ENABLE_LOGS)
     {
         puts(c);
-        printf("\n");
     }
 }
 
@@ -23,5 +22,4 @@ err(char c[])
 {
     printf(" - Error: ");
     puts(c);
-    printf("\n");
 }

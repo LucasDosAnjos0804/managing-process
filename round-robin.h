@@ -1,6 +1,6 @@
 #include "job.h"
 
-typedef struct
+typedef struct Round
 {
     int tam;
     Job *start; 
@@ -28,7 +28,10 @@ drop_job (Round* robin)
             Remove no do inicio da fila circular;
     */
 
-    Job *no = robin->start;
+    logs("ei3");
+    if (robin == NULL) err("robin null"); 
+    Job *no = robin->start;  ///// por algun motivo apos um drop, robin start fica null
+    logs("ei4");
 
     if (no) // se for NULL, quer dizer que a fila esta vazia
     {
@@ -40,6 +43,8 @@ drop_job (Round* robin)
         }
 
         no->prox = NULL;
+        
+        robin->tam--;
     }
 
     return no;
