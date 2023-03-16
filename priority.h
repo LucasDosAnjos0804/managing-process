@@ -7,7 +7,7 @@ typedef struct Priority_row
             Eh uma fila de prioridades;
             cada 'Row' eh uma lista ligada;
     */
-    Round *p5;
+    Round *p5; //n sei pq precisa disso mais precisa asdfasdfasdf
     Round *p4; // mais alta prioridade
     Round *p3;
     Round *p2;

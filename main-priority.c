@@ -57,8 +57,6 @@ drop_PriorityJob (Priority_row *pr)
     */
     Round *r;
     
-    logs("ei"); // falha de segmentação no drop()
-
     if (pr->p4->tam) // TAS ERRADO
     {
         r = pr->p4;
@@ -71,7 +69,6 @@ drop_PriorityJob (Priority_row *pr)
     } else {
         return NULL;
     }
-    logs("ei2");
     return drop_job(r);
 }
 
@@ -101,14 +98,14 @@ int main()
     }
 
 
-    // add_JobToPriorityRow( create_job(thr_one,4),pr );
-    // add_JobToPriorityRow( create_job(thr_one,4),pr );
-    // add_JobToPriorityRow( create_job(thr_one,4),pr );
+    add_JobToPriorityRow( create_job(thr_one,4),pr );
+    add_JobToPriorityRow( create_job(thr_one,4),pr );
+    add_JobToPriorityRow( create_job(thr_one,4),pr );
 
     add_JobToPriorityRow(create_job(thr_one,3),pr);
     add_JobToPriorityRow(create_job(thr_one,3),pr);
 
-    // // add_JobToPriorityRow(create_job(thr_one,2),pr);
+    add_JobToPriorityRow(create_job(thr_one,2),pr);
 
     
     Job *j;

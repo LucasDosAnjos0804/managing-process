@@ -27,11 +27,8 @@ drop_job (Round* robin)
         Descricao:
             Remove no do inicio da fila circular;
     */
-
-    logs("ei3");
-    if (robin == NULL) err("robin null"); 
+    
     Job *no = robin->start;  ///// por algun motivo apos um drop, robin start fica null
-    logs("ei4");
 
     if (no) // se for NULL, quer dizer que a fila esta vazia
     {
